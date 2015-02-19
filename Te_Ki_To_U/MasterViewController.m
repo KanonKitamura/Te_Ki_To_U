@@ -60,7 +60,10 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+    
+    
     insertMode = YES;//予定追加モードをONにします
+    
     /*①画面の上にある「ナビゲーションバー(UINavigationBar)」に
      コードでボタンを追加しています。
       ②追加ボタンをバーの右側に設置しています。押したときには
@@ -79,9 +82,9 @@
     
     if (insertMode == YES){
         blackView =[[UIView alloc]initWithFrame:CGRectMake(0,200,320,320)];
-       blackView.backgroundColor=[UIColor blackColor];
+       blackView.backgroundColor=[UIColor groupTableViewBackgroundColor];
         textField =[[UITextField alloc]initWithFrame:CGRectMake(25, 25, 270, 40)];
-        textField.backgroundColor=[UIColor blackColor];
+        textField.backgroundColor=[UIColor whiteColor];
         textField.delegate=self;
         [blackView addSubview:textField];
         [self.view addSubview:blackView];
