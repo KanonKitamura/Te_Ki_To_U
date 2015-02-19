@@ -9,7 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface MasterViewController : UITableViewController
+<UITextFieldDelegate>
+{
+    
 
+UIView *orangeView;//TextFieldを乗せるだけの色付きView
+    BOOL insertMode;//何回もTextFieldを乗せてしまわないためのフラグ
+    UITextField *textField;
+    
 
+}
 @end
 
