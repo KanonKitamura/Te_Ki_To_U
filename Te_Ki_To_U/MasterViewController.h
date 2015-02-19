@@ -13,7 +13,7 @@
 {
     
 
-UIView *orangeView;//TextFieldを乗せるだけの色付きView
+UIView *blackView;//TextFieldを乗せるだけの色付きView
     BOOL insertMode;//何回もTextFieldを乗せてしまわないためのフラグ
     UITextField *textField;
     

@@ -41,8 +41,8 @@
                            initWithTitle:@"未記入"message:@"何も書かれていません。"delegate:self cancelButtonTitle:@"OK"otherButtonTitles:nil,nil];
         [alert show];
     }
-    if(orangeView){
-        [orangeView removeFromSuperview];
+    if(blackView){
+        [blackView removeFromSuperview];
     }
     [textField resignFirstResponder];
     return  YES;
@@ -78,13 +78,13 @@
 - (void)insertNewObject:(id)sender {
     
     if (insertMode == YES){
-        orangeView =[[UIView alloc]initWithFrame:CGRectMake(0,200,320,320)];
-        orangeView.backgroundColor=[UIColor blackColor];
+        blackView =[[UIView alloc]initWithFrame:CGRectMake(0,200,320,320)];
+       blackView.backgroundColor=[UIColor blackColor];
         textField =[[UITextField alloc]initWithFrame:CGRectMake(25, 25, 270, 40)];
         textField.backgroundColor=[UIColor blackColor];
         textField.delegate=self;
-        [orangeView addSubview:textField];
-        [self.view addSubview:orangeView];
+        [blackView addSubview:textField];
+        [self.view addSubview:blackView];
         insertMode=NO;
     }else{
         NSLog(@"insertModeになっていません");
